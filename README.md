@@ -22,5 +22,5 @@ One of the standout features of the car is its autonomous return functionality, 
 2. The delivery box can only be unlocked by entering the correct password through the keypad.
    
 3. If the connection is lost, the car automatically navigates back to its starting point using its autonomous return feature.
-   
-4.The app also allows for manual return by tapping a button, which triggers the car's return.
+
+4. The app also allows for manual return by tapping a button, which triggers the car's return.
