@@ -1,0 +1,16 @@
+ATMEGA32/MCAL/DIO/DIO.d ATMEGA32/MCAL/DIO/DIO.o: \
+ ../ATMEGA32/MCAL/DIO/DIO.c ../ATMEGA32/MCAL/DIO/DIO.h \
+ ../ATMEGA32/MCAL/DIO/DIO_Types.h \
+ ../ATMEGA32/MCAL/DIO/../../LIB/common_macros.h \
+ ../ATMEGA32/MCAL/DIO/DIO_REGS.h \
+ ../ATMEGA32/MCAL/DIO/../../LIB/std_types.h
+
+../ATMEGA32/MCAL/DIO/DIO.h:
+
+../ATMEGA32/MCAL/DIO/DIO_Types.h:
+
+../ATMEGA32/MCAL/DIO/../../LIB/common_macros.h:
+
+../ATMEGA32/MCAL/DIO/DIO_REGS.h:
+
+../ATMEGA32/MCAL/DIO/../../LIB/std_types.h:

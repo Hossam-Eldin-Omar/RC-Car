@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ProjectGuid>{3cc9e898-c66d-409f-afea-e3bd8ad7f97e}</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>new_rc_car</AssemblyName>
+    <Name>new_rc_car</Name>
+    <RootNamespace>new_rc_car</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>3.5.0</AsfVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ATMEGA32\HAL\DC_MOTOR\DC_MOTOR.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\DC_MOTOR\DC_MOTOR.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\DHT11\DHT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\DHT11\DHT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\INPUT\INPUT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\INPUT\INPUT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\KEYPAD\keypad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\KEYPAD\keypad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\LCD\LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\LCD\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\OUTPUT\OUTPUT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\OUTPUT\OUTPUT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\PORT\PORT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\PORT\PORT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\SERVO_MOTOR\servo_motor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\SERVO_MOTOR\servo_motor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\uitrasonic\ultrasonic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\HAL\uitrasonic\ultrasonic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\LIB\common_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\LIB\std_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\ADC\ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\ADC\ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\ADC\ADC_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\ADC\ADC_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\DIO\DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\DIO\DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\DIO\DIO_REGS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\DIO\DIO_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\EEPROM\EEPROM_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\EEPROM\EEPROM_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\EXTI\EXTI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\EXTI\EXTI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\EXTI\EXTI_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\EXTI\EXTI_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\GIE\GIE.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\GIE\GIE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\GIE\GIE_REGS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER0\TIMER0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER0\TIMER0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER0\TIMER0_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER0\TIMER0_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER1\TIMER1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER1\TIMER1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER1\TIMER1_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER1\TIMER1_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER2\TIMER2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER2\TIMER2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER2\TIMER2_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\TIMER2\TIMER2_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\UART\UART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\UART\UART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\UART\UART_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ATMEGA32\MCAL\UART\UART_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="new_rc_car.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ATMEGA32\" />
+    <Folder Include="ATMEGA32\HAL\" />
+    <Folder Include="ATMEGA32\HAL\DC_MOTOR\" />
+    <Folder Include="ATMEGA32\HAL\DHT11\" />
+    <Folder Include="ATMEGA32\HAL\INPUT\" />
+    <Folder Include="ATMEGA32\HAL\KEYPAD\" />
+    <Folder Include="ATMEGA32\HAL\LCD\" />
+    <Folder Include="ATMEGA32\HAL\OUTPUT\" />
+    <Folder Include="ATMEGA32\HAL\PORT\" />
+    <Folder Include="ATMEGA32\HAL\SERVO_MOTOR\" />
+    <Folder Include="ATMEGA32\HAL\uitrasonic\" />
+    <Folder Include="ATMEGA32\LIB\" />
+    <Folder Include="ATMEGA32\MCAL\" />
+    <Folder Include="ATMEGA32\MCAL\ADC\" />
+    <Folder Include="ATMEGA32\MCAL\DIO\" />
+    <Folder Include="ATMEGA32\MCAL\EEPROM\" />
+    <Folder Include="ATMEGA32\MCAL\EXTI\" />
+    <Folder Include="ATMEGA32\MCAL\GIE\" />
+    <Folder Include="ATMEGA32\MCAL\TIMER0\" />
+    <Folder Include="ATMEGA32\MCAL\TIMER1\" />
+    <Folder Include="ATMEGA32\MCAL\TIMER2\" />
+    <Folder Include="ATMEGA32\MCAL\UART\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

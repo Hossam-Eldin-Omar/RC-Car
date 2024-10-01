@@ -1,0 +1,13 @@
+ATMEGA32/MCAL/GIE/GIE.d ATMEGA32/MCAL/GIE/GIE.o: \
+ ../ATMEGA32/MCAL/GIE/GIE.c ../ATMEGA32/MCAL/GIE/GIE.h \
+ ../ATMEGA32/MCAL/GIE/../../LIB/common_macros.h \
+ ../ATMEGA32/MCAL/GIE/GIE_REGS.h \
+ ../ATMEGA32/MCAL/GIE/../../LIB/std_types.h
+
+../ATMEGA32/MCAL/GIE/GIE.h:
+
+../ATMEGA32/MCAL/GIE/../../LIB/common_macros.h:
+
+../ATMEGA32/MCAL/GIE/GIE_REGS.h:
+
+../ATMEGA32/MCAL/GIE/../../LIB/std_types.h:

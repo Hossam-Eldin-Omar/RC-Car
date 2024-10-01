@@ -1,0 +1,19 @@
+ATMEGA32/HAL/KEYPAD/keypad.d ATMEGA32/HAL/KEYPAD/keypad.o: \
+ ../ATMEGA32/HAL/KEYPAD/keypad.c ../ATMEGA32/HAL/KEYPAD/keypad.h \
+ ../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/DIO.h \
+ ../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/DIO_Types.h \
+ ../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/../../LIB/common_macros.h \
+ ../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/DIO_REGS.h \
+ ../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/../../LIB/std_types.h
+
+../ATMEGA32/HAL/KEYPAD/keypad.h:
+
+../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/DIO.h:
+
+../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/DIO_Types.h:
+
+../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/../../LIB/common_macros.h:
+
+../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/DIO_REGS.h:
+
+../ATMEGA32/HAL/KEYPAD/../../MCAL/DIO/../../LIB/std_types.h:

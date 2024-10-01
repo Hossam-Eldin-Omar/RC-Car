@@ -1,0 +1,15 @@
+ATMEGA32/MCAL/ADC/ADC.d ATMEGA32/MCAL/ADC/ADC.o: \
+ ../ATMEGA32/MCAL/ADC/ADC.c ../ATMEGA32/MCAL/ADC/ADC.h \
+ ../ATMEGA32/MCAL/ADC/ADC_config.h ../ATMEGA32/MCAL/ADC/ADC_def.h \
+ ../ATMEGA32/MCAL/ADC/../../LIB/std_types.h \
+ ../ATMEGA32/MCAL/ADC/../../LIB/common_macros.h
+
+../ATMEGA32/MCAL/ADC/ADC.h:
+
+../ATMEGA32/MCAL/ADC/ADC_config.h:
+
+../ATMEGA32/MCAL/ADC/ADC_def.h:
+
+../ATMEGA32/MCAL/ADC/../../LIB/std_types.h:
+
+../ATMEGA32/MCAL/ADC/../../LIB/common_macros.h:

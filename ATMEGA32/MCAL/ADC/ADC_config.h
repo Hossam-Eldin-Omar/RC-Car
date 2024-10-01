@@ -1,0 +1,88 @@
+/*File Guard*/
+#ifndef ADC_CONFIG_H_
+#define ADC_CONFIG_H_
+
+#include "ADC_def.h"
+
+
+#ifndef F_CPU
+    #define F_CPU 8000000UL
+    #warning "F_CPU not defined! Assuming 8MHz."
+#endif
+
+
+/*Set the Voltage Reference
+ * choose between
+ * 1. ADC_VOLTAGE_REF_AREF
+ * 2. ADC_VOLTAGE_REF_AVCC
+ * 3. ADC_VOLTAGE_REF_2_56v
+ */
+#define ADC_VOLTAGE_REF ADC_VOLTAGE_REF_AVCC
+
+
+/*Set ADC ADJUST mode
+ * choose between
+ * 1. ADC_RIGHT_ADJUSTED
+ * 2. ADC_LEFT_ADJUSTED
+ */
+#define ADC_ADJUSTMENT ADC_RIGHT_ADJUSTED
+
+
+/*Set ADC Interrupt Status
+ * choose between
+ * 1. ADC_INT_DISABLE
+ * 2. ADC_INT_ENABLE
+ */
+#define ADC_INT_STATUS ADC_INT_ENABLE
+
+
+/*Set ADC Auto Trigger Enable
+ * choose between
+ * 1. ADC_MODE_SINGLE_CONVERSION
+ * 2. ADC_MODE_AUTO_TRIGGER
+ * */
+#define ADC_MODE ADC_MODE_AUTO_TRIGGER
+
+
+/*Set ADC AUTO TRIGGER Source
+ * choose between
+ * 1. ADC_AUTO_TRIGGER_SRC_FREE_RUNNING_msk
+ * 2. ADC_AUTO_TRIGGER_SRC_ANALOG_COMP_msk
+ * 3. ADC_AUTO_TRIGGER_SRC_EXTI0_msk
+ * 4. ADC_AUTO_TRIGGER_SRC_TIMER0_COMP_msk
+ * 5. ADC_AUTO_TRIGGER_SRC_TIMER0_OVF_msk
+ * 6. ADC_AUTO_TRIGGER_SRC_TIMER1_COMP_msk
+ * 7. ADC_AUTO_TRIGGER_SRC_TIMER1_OVF_msk
+ * 8. ADC_AUTO_TRIGGER_SRC_TIMER1_CAPT_msk
+ */
+#define ADC_AUTO_TRIG_SRCE ADC_AUTO_TRIGGER_SRC_EXTI0_msk
+
+
+/*Set the ADC prescaler*/
+#if F_CPU/2 <= ADC_FREQUENCY_MAX && F_CPU/2 >= ADC_FREQUENCY_MIN
+    #define ADC_PRESCALER 0x00
+
+#elif F_CPU/4 <= ADC_FREQUENCY_MAX && F_CPU/4 >= ADC_FREQUENCY_MIN
+    #define ADC_PRESCALER 0x02
+
+#elif F_CPU/8 <= ADC_FREQUENCY_MAX && F_CPU/8 >= ADC_FREQUENCY_MIN
+    #define ADC_PRESCALER 0x03
+
+#elif F_CPU/16 <= ADC_FREQUENCY_MAX && F_CPU/16 >= ADC_FREQUENCY_MIN
+    #define ADC_PRESCALER 0x04
+
+#elif F_CPU/32 <= ADC_FREQUENCY_MAX && F_CPU/32 >= ADC_FREQUENCY_MIN
+    #define ADC_PRESCALER 0x05
+
+#elif F_CPU/64 <= ADC_FREQUENCY_MAX && F_CPU/64 >= ADC_FREQUENCY_MIN
+    #define ADC_PRESCALER 0x06
+
+#elif F_CPU/128 <= ADC_FREQUENCY_MAX && F_CPU/128 >= ADC_FREQUENCY_MIN
+    #define ADC_PRESCALER 0x07
+
+#else
+    #error "No valid ADC_PRESCALER found!"
+#endif
+
+
+#endif /* ADC_CONFIG_H_ */
